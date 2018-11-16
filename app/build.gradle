@@ -7,8 +7,9 @@ apply plugin: "androidx.navigation.safeargs"
 android {
     compileSdkVersion 28
     defaultConfig {
+        multiDexEnabled true
         applicationId "coesmapp.com.coesmapp"
-        minSdkVersion 15
+        minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -19,6 +20,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
