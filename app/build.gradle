@@ -45,12 +45,21 @@ dependencies {
     implementation "android.arch.navigation:navigation-fragment-ktx:$nav_version"
     implementation "android.arch.navigation:navigation-ui-ktx:$nav_version"
 
-    // retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    // Retrofit libraries
     implementation 'com.google.code.gson:gson:2.8.5'
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.okhttp:logging-interceptor:$okhttp_version"
+    implementation "com.squareup.okhttp:okhttp:$okhttp_version"
+    implementation 'com.squareup.okio:okio:1.14.0'
+
+    // Dependency injection libraries
+    implementation "org.koin:koin-android:$koin_version"
+    implementation "org.koin:koin-android-scope:$koin_version"
+    implementation "org.koin:koin-android-viewmodel:$koin_version"
+
 
     // Test Libraries
-
     testImplementation "android.arch.core:core-testing:$lifecycle_version"
 
     testImplementation 'junit:junit:4.12'
