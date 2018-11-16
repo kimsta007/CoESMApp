@@ -1,9 +1,8 @@
-package coesmapp.com.coesmapp.activities
+package coesmapp.com.coesmapp.ui.activities
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import coesmapp.com.coesmapp.R
-import coesmapp.com.coesmapp.activities.common.BaseActivity
+import coesmapp.com.coesmapp.ui.common.BaseActivity
 
 class Login : BaseActivity() {
 

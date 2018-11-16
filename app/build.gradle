@@ -58,7 +58,6 @@ dependencies {
     implementation "org.koin:koin-android-scope:$koin_version"
     implementation "org.koin:koin-android-viewmodel:$koin_version"
 
-
     // Test Libraries
     testImplementation "android.arch.core:core-testing:$lifecycle_version"
 

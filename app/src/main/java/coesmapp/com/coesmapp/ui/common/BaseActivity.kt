@@ -1,4 +1,4 @@
-package coesmapp.com.coesmapp.activities.common
+package coesmapp.com.coesmapp.ui.common
 
 import android.support.v7.app.AppCompatActivity
 
