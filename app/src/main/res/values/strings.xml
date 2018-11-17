@@ -14,4 +14,14 @@
     <string name="preferred_method_email_phone_hint">Preferred Method (Email/ Phone)</string>
     <string name="required_label">Required</string>
     <string name="asterisk">*</string>
+    <string name="communication_message">Would you like to set this number and email address to be your primary contact
+        details for all City Of Ekurhuleni communication?
+    </string>
+    <string name="primary_phone_label">This is my primary phone number</string>
+    <string name="different_primary_phone_label">I have a different primary number</string>
+    <string name="email_address_label">Email Address</string>
+    <string name="sample_email">trustmub@gmail.com</string>
+    <string name="primary_email_label">This is my primary email address</string>
+    <string name="not_primary_email_label">i have a different primary email address.</string>
+    <string name="cellphone_number_label">Cellphone Number</string>
 </resources>

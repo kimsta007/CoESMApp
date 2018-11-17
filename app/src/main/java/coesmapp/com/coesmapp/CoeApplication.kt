@@ -5,6 +5,7 @@ import android.app.Application
 import android.arch.persistence.room.Room
 import coesmapp.com.coesmapp.repository.LoginRepository
 import coesmapp.com.coesmapp.utilities.AppDatabase
+import coesmapp.com.coesmapp.viewmodels.ContactDetailsViewModel
 import coesmapp.com.coesmapp.viewmodels.LoginViewModel
 import org.koin.android.ext.android.startKoin
 import org.koin.android.viewmodel.ext.koin.viewModel
@@ -70,5 +71,6 @@ class CoeApplication : Application() {
      */
     private fun getViewModelModule(): Module = module {
         viewModel { LoginViewModel() }
+        viewModel { ContactDetailsViewModel() }
     }
 }
