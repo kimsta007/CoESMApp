@@ -17,4 +17,7 @@
     <fragment android:id="@+id/destination_address_details"
               android:name="coesmapp.com.coesmapp.ui.fragments.AddressDetailsFragment"
               android:label="AddressDetailsFragment"/>
+    <fragment android:id="@+id/destination_registration_verification"
+              android:name="coesmapp.com.coesmapp.ui.fragments.RegistrationVerificationFragment"
+              android:label="RegistrationVerificationFragment"/>
 </navigation>

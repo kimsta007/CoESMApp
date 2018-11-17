@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">CoESMApp</string>
     <string name="continue_label">Continue</string>
+    <string name="i_decline_label">I Decline</string>
+    <string name="i_accept_label">I Accept</string>
+    <string name="surname_hint">Surname</string>
+    <string name="gender_label">Gender</string>
+    <string name="gender_male_label">Male</string>
+    <string name="gender_female_label">Female</string>
+    <string name="id_or_passport_number_hint">ID or Passport Number</string>
+    <string name="email_address_hint">Email Address</string>
+    <string name="cellphone_number_hint">Cellphone Number</string>
+    <string name="preferred_method_hint">Preferred Method</string>
+    <string name="preferred_method_email_phone_hint">Preferred Method (Email/ Phone)</string>
+    <string name="required_label">Required</string>
+    <string name="asterisk">*</string>
 </resources>

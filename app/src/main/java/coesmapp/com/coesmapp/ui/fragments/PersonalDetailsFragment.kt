@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import coesmapp.com.coesmapp.R
 import coesmapp.com.coesmapp.ui.common.BaseFragment
+import kotlinx.android.synthetic.main.fragment_personal_details.*
 import kotlinx.android.synthetic.main.fragment_personal_details.view.*
 
 class PersonalDetailsFragment : BaseFragment() {
@@ -16,6 +17,14 @@ class PersonalDetailsFragment : BaseFragment() {
 
         view.btn_personal_continue.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.destination_contact_details)
+        }
+
+        view.cb_gender_female.setOnCheckedChangeListener { _ , isChecked ->
+            if (isChecked) view.cb_gender_male.isChecked = false
+        }
+
+        view.cb_gender_male.setOnCheckedChangeListener { _ , isChecked ->
+            if (isChecked) view.cb_gender_female.isChecked = false
         }
 
         return view

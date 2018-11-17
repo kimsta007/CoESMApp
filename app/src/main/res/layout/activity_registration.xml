@@ -6,6 +6,7 @@
               android:layout_height="match_parent"
               android:orientation="vertical"
               tools:context=".ui.activities.RegistrationActivity">
+
     <fragment
             android:id="@+id/navigation_registration_host_fragment"
             android:name="androidx.navigation.fragment.NavHostFragment"
