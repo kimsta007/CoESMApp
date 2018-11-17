@@ -94,7 +94,7 @@
                     android:textAlignment="center"/>
 
             <TextView
-                    android:id="@+id/register"
+                    android:id="@+id/tv_register"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="REGISTER ACCOUNT"

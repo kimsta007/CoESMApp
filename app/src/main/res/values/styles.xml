@@ -9,6 +9,7 @@
     </style>
 
     <style name="Button_Solid">
+        <item name="android:textAllCaps">false</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:background">@drawable/button_bg_solid</item>
