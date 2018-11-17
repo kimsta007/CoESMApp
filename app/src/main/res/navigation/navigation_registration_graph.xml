@@ -16,8 +16,38 @@
               android:label="ContactDetailsFragment"/>
     <fragment android:id="@+id/destination_address_details"
               android:name="coesmapp.com.coesmapp.ui.fragments.AddressDetailsFragment"
-              android:label="AddressDetailsFragment"/>
+              android:label="AddressDetailsFragment">
+        <action android:id="@+id/action_destination_address_details_to_destination_complex_address"
+                app:destination="@id/destination_complex_address"/>
+        <action android:id="@+id/action_destination_address_details_to_standAddressFragment"
+                app:destination="@id/destination_stand_address"/>
+        <action android:id="@+id/action_destination_address_details_to_commercialAddressFragment"
+                app:destination="@id/destination_commecial_address"/>
+    </fragment>
     <fragment android:id="@+id/destination_registration_verification"
               android:name="coesmapp.com.coesmapp.ui.fragments.RegistrationVerificationFragment"
-              android:label="RegistrationVerificationFragment"/>
+              android:label="RegistrationVerificationFragment">
+        <action android:id="@+id/action_destination_registration_verification_to_destination_address_details"
+                app:destination="@id/destination_address_details"/>
+    </fragment>
+    <fragment android:id="@+id/destination_complex_address"
+              android:name="coesmapp.com.coesmapp.ui.fragments.ComplexAddressFragment"
+              android:label="ComplexAddressFragment">
+        <action android:id="@+id/action_destination_complex_address_to_destination_address_details"
+                app:destination="@id/destination_address_details"/>
+    </fragment>
+    <fragment android:id="@+id/destination_stand_address"
+              android:name="coesmapp.com.coesmapp.ui.fragments.StandAddressFragment"
+              android:label="StandAddressFragment">
+        <action android:id="@+id/action_standAddressFragment_to_destination_address_details"
+                app:destination="@id/destination_address_details"/>
+        <action android:id="@+id/action_destination_stand_address_to_destination_registration_verification"
+                app:destination="@id/destination_registration_verification"/>
+    </fragment>
+    <fragment android:id="@+id/destination_commecial_address"
+              android:name="coesmapp.com.coesmapp.ui.fragments.CommercialAddressFragment"
+              android:label="CommercialAddressFragment">
+        <action android:id="@+id/action_commercialAddressFragment_to_destination_address_details"
+                app:destination="@id/destination_address_details"/>
+    </fragment>
 </navigation>

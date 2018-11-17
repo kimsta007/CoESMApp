@@ -14,9 +14,25 @@ class AddressDetailsFragment : BaseFragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_address_details, container, false)
 
+
+
+        view.btn_address_complex.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.destination_complex_address)
+        }
+
+        view.btn_address_stand_alone.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.destination_stand_address)
+        }
+
+        view.btn_address_commecial.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.destination_commecial_address)
+        }
+
+
         view.btn_address_continue.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.destination_registration_verification)
         }
+
 
         return view
     }

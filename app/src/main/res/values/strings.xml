@@ -24,4 +24,15 @@
     <string name="primary_email_label">This is my primary email address</string>
     <string name="not_primary_email_label">i have a different primary email address.</string>
     <string name="cellphone_number_label">Cellphone Number</string>
+    <string name="province_hint">Province</string>
+    <string name="postal_code_hint">Postal Code</string>
+    <string name="street_number_hint">Street Number</string>
+    <string name="street_name_hint">Street Name</string>
+    <string name="suburb_hint">Suburb</string>
+    <string name="select_your_property_type_message">Select your property type</string>
+    <string name="complex_name">Complex</string>
+    <string name="stand_alone_house_name">Stand alone house</string>
+    <string name="commercial_property_name">Commercial property</string>
+    <string name="building_name">Building Name/Number</string>
+    <string name="company_name_hint">Company Name</string>
 </resources>
