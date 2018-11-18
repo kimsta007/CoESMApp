@@ -1,4 +1,4 @@
-package coesmapp.com.coesmapp.ui.fragments
+package coesmapp.com.coesmapp.ui.registration
 
 import android.arch.lifecycle.Observer
 import android.os.Bundle

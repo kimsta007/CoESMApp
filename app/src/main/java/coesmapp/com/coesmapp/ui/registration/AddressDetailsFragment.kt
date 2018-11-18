@@ -1,4 +1,4 @@
-package coesmapp.com.coesmapp.ui.fragments
+package coesmapp.com.coesmapp.ui.registration
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -31,7 +31,6 @@ class AddressDetailsFragment : BaseFragment() {
         view.btn_address_commecial.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.destination_commecial_address)
         }
-
 
         view.btn_address_continue.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.destination_registration_verification)

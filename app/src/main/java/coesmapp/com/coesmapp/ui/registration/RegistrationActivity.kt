@@ -1,4 +1,4 @@
-package coesmapp.com.coesmapp.ui.activities
+package coesmapp.com.coesmapp.ui.registration
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle

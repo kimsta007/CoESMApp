@@ -21,7 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activities.RegistrationActivity">
+        <activity android:name=".ui.registration.RegistrationActivity">
+        </activity>
+        <activity android:name=".ui.home.HomeActivity">
         </activity>
     </application>
 
