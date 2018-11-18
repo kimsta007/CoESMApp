@@ -3,6 +3,8 @@
           xmlns:tools="http://schemas.android.com/tools"
           package="coesmapp.com.coesmapp">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
             android:name=".CoeApplication"
             android:allowBackup="true"

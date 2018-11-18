@@ -10,5 +10,8 @@ class RegistrationActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration)
+
+        setSupportActionBar(findViewById(R.id.toolbar_registration))
+
     }
 }

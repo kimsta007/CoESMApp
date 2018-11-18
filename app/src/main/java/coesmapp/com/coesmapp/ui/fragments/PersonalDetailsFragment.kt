@@ -15,6 +15,11 @@ class PersonalDetailsFragment : BaseFragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_personal_details, container, false)
 
+        // set title for ToolBar
+        val regToolbar = activity?.findViewById<android.support.v7.widget.Toolbar>(R.id.toolbar_registration)
+        regToolbar?.title = getString(R.string.personal_details_title_label)
+
+
         view.btn_personal_continue.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.destination_contact_details)
         }

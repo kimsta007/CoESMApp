@@ -12,6 +12,10 @@ class ComplexAddressFragment : BaseFragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_comeplex_address, container, false)
 
+        // set title for ToolBar
+        val regToolbar = activity?.findViewById<android.support.v7.widget.Toolbar>(R.id.toolbar_registration)
+        regToolbar?.title = getString(R.string.complex_address_title_label)
+
         return view
     }
 }

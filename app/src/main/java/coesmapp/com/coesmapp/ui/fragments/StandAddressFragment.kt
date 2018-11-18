@@ -14,6 +14,10 @@ class StandAddressFragment : BaseFragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_stand_address, container, false)
 
+        // set title for ToolBar
+        val regToolbar = activity?.findViewById<android.support.v7.widget.Toolbar>(R.id.toolbar_registration)
+        regToolbar?.title = getString(R.string.stand_alone_title_label)
+
 
         view.btn_stand_continue.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.destination_registration_verification)

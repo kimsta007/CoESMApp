@@ -7,6 +7,14 @@
               android:orientation="vertical"
               tools:context=".ui.activities.RegistrationActivity">
 
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_registration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Registration" android:elevation="4dp">
+
+    </android.support.v7.widget.Toolbar>
+
     <fragment
             android:id="@+id/navigation_registration_host_fragment"
             android:name="androidx.navigation.fragment.NavHostFragment"

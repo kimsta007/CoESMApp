@@ -21,6 +21,10 @@ class ContactDetailsFragment : BaseFragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_contact_details, container, false)
 
+        // set title for ToolBar
+        val regToolbar = activity?.findViewById<android.support.v7.widget.Toolbar>(R.id.toolbar_registration)
+        regToolbar?.title = getString(R.string.contact_details_title_label)
+
 
         view.btn_contact_continue.isEnabled = false
         var primaryCont: PrimaryContacts = PrimaryContacts(false, false)

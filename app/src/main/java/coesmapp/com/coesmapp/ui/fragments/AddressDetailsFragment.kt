@@ -15,6 +15,10 @@ class AddressDetailsFragment : BaseFragment() {
         val view = inflater.inflate(R.layout.fragment_address_details, container, false)
 
 
+        // set title for ToolBar
+        val regToolbar = activity?.findViewById<android.support.v7.widget.Toolbar>(R.id.toolbar_registration)
+        regToolbar?.title = getString(R.string.address_details_title_label)
+
 
         view.btn_address_complex.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.destination_complex_address)
