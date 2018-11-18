@@ -114,6 +114,15 @@
                             <option name="y" value="-140" />
                           </Point>
                         </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_destination_registration_verification_to_destination_address_details">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
                       </LayoutPositions>
                     </value>
                   </entry>
@@ -128,6 +137,11 @@
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_destination_stand_address_to_destination_registration_verification">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_standAddressFragment_to_destination_address_details">
                               <value>
                                 <LayoutPositions />
