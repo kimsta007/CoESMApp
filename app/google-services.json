@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "709129986040",
+    "firebase_url": "https://coesmapp.firebaseio.com",
+    "project_id": "coesmapp",
+    "storage_bucket": "coesmapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709129986040:android:793db2f6ff2bf5f6",
+        "android_client_info": {
+          "package_name": "coesmapp.com.coesmapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "709129986040-a3itnhql3vbo0c927bnmg60kopoilr2q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "coesmapp.com.coesmapp",
+            "certificate_hash": "04358ca26bd672556e201c807792b6856cfc4a4d"
+          }
+        },
+        {
+          "client_id": "709129986040-i0isiefvlajpd44pvjc3nhpt2ehg8u2i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyt5dYT_d692jNyuN16ucjFLJHvnhQUsg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "709129986040-i0isiefvlajpd44pvjc3nhpt2ehg8u2i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
