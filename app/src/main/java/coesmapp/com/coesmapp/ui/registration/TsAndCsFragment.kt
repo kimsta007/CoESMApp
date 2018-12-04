@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import coesmapp.com.coesmapp.R
 import coesmapp.com.coesmapp.ui.common.BaseFragment
+import coesmapp.com.coesmapp.utilities.TS_AND_CS_URL
 import kotlinx.android.synthetic.main.fragment_ts_and_cs.view.*
 
 class TsAndCsFragment : BaseFragment() {
@@ -19,7 +20,7 @@ class TsAndCsFragment : BaseFragment() {
         regToolbar?.title = getString(R.string.ts_and_cs_title_label)
 
         // Load the terms and conditions from the browser
-        view.wv_ts_and_cs.loadUrl("https://www.samplestore.com/legal/tnc_for_members")
+        view.wv_ts_and_cs.loadUrl(TS_AND_CS_URL)
 
 
 
