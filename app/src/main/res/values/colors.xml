@@ -9,5 +9,9 @@
     <color name="colorSpinner">#ececec</color>
     <color name="colorDisabled">#d4d4d4</color>
 
+    <color name="tab_checked">#d4d4d4</color>
+    <color name="tab_unchecked">#d4d4d4</color>
+
+
 
 </resources>

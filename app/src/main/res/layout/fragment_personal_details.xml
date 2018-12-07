@@ -35,7 +35,7 @@
 
                 <TextView android:layout_width="match_parent"
                           android:layout_height="wrap_content"
-                          android:text="@string/preferred_method_email_phone_hint"/>
+                          android:text="@string/proper_ownership_status"/>
 
 
                 <Spinner
@@ -158,7 +158,8 @@
                         android:layout_width="match_parent"
                         android:background="@color/colorSpinner"
                         android:layout_height="40dp"
-                        android:hint="@string/preferred_method_email_phone_hint"/>
+                        android:hint="@string/preferred_method_email_phone_hint"
+                        android:id="@+id/spinner_preferred_method"/>
             </android.support.design.widget.TextInputLayout>
             <TextView
                     android:text="@string/asterisk"
