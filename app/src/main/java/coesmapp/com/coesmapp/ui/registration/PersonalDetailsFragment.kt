@@ -4,19 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.Spinner
 import androidx.navigation.Navigation
 import coesmapp.com.coesmapp.R
 import coesmapp.com.coesmapp.ui.common.BaseFragment
 import coesmapp.com.coesmapp.utilities.displaySpinner
-import kotlinx.android.synthetic.main.fragment_personal_details.*
 import kotlinx.android.synthetic.main.fragment_personal_details.view.*
 
 class PersonalDetailsFragment : BaseFragment() {
 
-    private lateinit var ownershipSpinner: Spinner
-    private lateinit var communicationMethodSpinner: Spinner
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -26,13 +21,9 @@ class PersonalDetailsFragment : BaseFragment() {
         val regToolbar = activity?.findViewById<android.support.v7.widget.Toolbar>(R.id.toolbar_registration)
         regToolbar?.title = getString(R.string.personal_details_title_label)
 
-
-        ownershipSpinner = view.findViewById(R.id.spinner_owner_tenant)
-        communicationMethodSpinner = view.findViewById(R.id.spinner_preferred_method)
-
-        ownershipSpinner.displaySpinner(this.activity!!, R.array.property_ownership)
-        communicationMethodSpinner.displaySpinner(this.activity!!, R.array.contact_preference)
-
+        // Setup the spinner values for
+        view.spinner_owner_tenant.displaySpinner(this.activity!!, R.array.property_ownership)
+        view.spinner_preferred_method.displaySpinner(this.activity!!, R.array.contact_preference)
 
         view.btn_personal_continue.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.destination_contact_details)
