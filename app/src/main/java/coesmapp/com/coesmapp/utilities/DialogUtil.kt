@@ -17,12 +17,27 @@ object DialogUtil {
         negativeListener: DialogInterface.OnClickListener,
         editTextInput: EditText
     ): AlertDialog {
-        return AlertDialog.Builder(context, R.style.AppTheme_Dialog) //AppTheme_Dialog
+        return AlertDialog.Builder(context, R.style.AppTheme_Dialog_With_Input) //AppTheme_Dialog
             .setTitle(title)
             .setView(editTextInput)
             .setMessage(message)
             .setPositiveButton(positiveButtonText, positiveListener)
             .setNegativeButton(negativeButtonText, negativeListener)
+            .create()
+    }
+
+    fun createAlertDialogWithOneButton(
+        context: Context,
+        title: String,
+        message: String,
+        positiveListener: DialogInterface.OnClickListener,
+        positiveButtonText: String
+    ): AlertDialog {
+        return AlertDialog.Builder(context, R.style.AppTheme_Dialog)
+            .setTitle(title)
+            .setMessage(message)
+            .setPositiveButton(positiveButtonText, positiveListener)
+            .setCancelable(false)
             .create()
     }
 }
