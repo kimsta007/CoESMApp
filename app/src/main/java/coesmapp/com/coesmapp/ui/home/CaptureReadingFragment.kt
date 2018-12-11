@@ -6,11 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import coesmapp.com.coesmapp.R
 import coesmapp.com.coesmapp.ui.common.BaseFragment
+import coesmapp.com.coesmapp.utilities.setupToolbarAndTitle
 
 class CaptureReadingFragment : BaseFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_capture_reading, container, false)
+
+        activity!!.setupToolbarAndTitle(R.id.toolbar_home, "Capture meter reading")
 
         return view
     }

@@ -1,14 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-                                             android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-            android:text="Meter Reading Fragment"
-            android:layout_width="wrap_content"
+    <EditText
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/textView5" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
+            android:ems="10"
+            android:id="@+id/et_meter_number"
+            app:layout_constraintTop_toTopOf="@+id/tv_label_meter_number"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_label_meter_number"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp" android:inputType="number"
+            app:layout_constraintStart_toStartOf="@+id/guideline4" android:textSize="12sp"/>
+    <TextView
+            android:text="Meter Number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_label_meter_number" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp" app:layout_constraintTop_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            android:textAlignment="center" android:textSize="12sp"/>
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guideline" app:layout_constraintGuide_begin="40dp"
+                                          android:orientation="horizontal"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/et_previouse_meter_reading"
+            app:layout_constraintTop_toTopOf="@+id/tv_label_previouse_meter_reading"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_label_previouse_meter_reading"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline4" android:textSize="12sp"/>
+    <TextView
+            android:text="Previouse Meter Reading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_label_previouse_meter_reading" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp" app:layout_constraintTop_toBottomOf="@+id/tv_label_meter_number"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            android:textAlignment="center" android:textSize="12sp"/>
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guideline4" app:layout_constraintGuide_begin="129dp"
+                                          android:orientation="vertical"/>
+    <TextView
+            android:text="Current Metter Reading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_label_current_meter_reading" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            android:layout_marginTop="40dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_previouse_meter_reading" android:textAlignment="center"
+            android:textSize="12sp"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/et_current_meter_reading"
+            app:layout_constraintTop_toTopOf="@+id/tv_label_current_meter_reading"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_label_current_meter_reading"
+            app:layout_constraintStart_toStartOf="@+id/guideline4" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp" android:textSize="12sp"/>
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp" app:srcCompat="@drawable/ic_photo_camera_black_24dp"
+            android:id="@+id/img_capture_reading" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="@+id/guideline5" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline6"/>
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guideline5" app:layout_constraintGuide_begin="305dp"
+                                          android:orientation="horizontal"/>
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guideline6" app:layout_constraintGuide_begin="500dp"
+                                          android:orientation="horizontal"/>
+    <Button
+            android:text="Submit Reading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_submit_reading" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/img_capture_reading" style="@style/Button_Solid"/>
 </android.support.constraint.ConstraintLayout>

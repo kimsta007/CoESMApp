@@ -29,3 +29,14 @@ fun Spinner.displaySpinner(
         }
 
 }
+
+/**
+ * Toolbar title Extension Function
+ *
+ * @param resourceId
+ * @param customTitle
+ */
+fun Activity.setupToolbarAndTitle(resourceId: Int, customTitle: String) {
+    val homeToolbar = this.findViewById<android.support.v7.widget.Toolbar>(resourceId)
+    homeToolbar?.title = customTitle
+}
