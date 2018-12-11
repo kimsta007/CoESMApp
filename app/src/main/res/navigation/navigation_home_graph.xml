@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/navigation_home_graph.xml" app:startDestination="@id/destination_home">
+            android:id="@+id/navigation_home_graph.xml"
+            app:startDestination="@id/destination_home">
 
-    <fragment android:id="@+id/destination_home" android:name="coesmapp.com.coesmapp.ui.home.HomeFragment"
+    <fragment android:id="@+id/destination_home"
+              android:name="coesmapp.com.coesmapp.ui.home.HomeFragment"
               android:label="HomeFragment"/>
     <fragment android:id="@+id/destination_reading_schedule"
               android:name="coesmapp.com.coesmapp.ui.home.ReadingScheduleFragment"
@@ -14,7 +16,8 @@
     <fragment android:id="@+id/destination_reading_objection"
               android:name="coesmapp.com.coesmapp.ui.home.ReadingObjectionFragment"
               android:label="ReadingObjectionFragment"/>
-    <fragment android:id="@+id/destination_reports" android:name="coesmapp.com.coesmapp.ui.home.ReportsFragment"
+    <fragment android:id="@+id/destination_reports"
+              android:name="coesmapp.com.coesmapp.ui.home.ReportsFragment"
               android:label="ReportsFragment"/>
     <fragment android:id="@+id/destination_capture_reading"
               android:name="coesmapp.com.coesmapp.ui.home.CaptureReadingFragment"

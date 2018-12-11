@@ -11,7 +11,8 @@
             android:id="@+id/toolbar_registration"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:title="Registration" android:elevation="4dp">
+            app:title="Registration"
+            android:elevation="4dp">
 
     </android.support.v7.widget.Toolbar>
 

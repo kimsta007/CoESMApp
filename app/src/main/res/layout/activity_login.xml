@@ -67,7 +67,8 @@
                     android:text="LOGIN"
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="30dp"
-                    android:layout_marginLeft="30dp" android:textAllCaps="false" style="@style/Button_Solid"/>
+                    android:layout_marginLeft="30dp" android:textAllCaps="false" style="@style/Button_Solid"
+                    android:id="@+id/btn_login"/>
 
             <TextView
                     android:id="@+id/forgot"
