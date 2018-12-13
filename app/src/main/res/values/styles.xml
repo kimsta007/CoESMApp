@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -23,6 +23,12 @@
 
     <style name="AppTheme_Dialog" parent="Theme.AppCompat.Light.Dialog.Alert">
 
+    </style>
+
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:titleTextColor" tools:targetApi="m">@color/colorWhite</item>
+        <item name="android:background">?android:attr/colorPrimary</item>
     </style>
 
 </resources>

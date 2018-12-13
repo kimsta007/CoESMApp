@@ -11,9 +11,8 @@
             android:id="@+id/toolbar_registration"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?android:attr/colorPrimary"
-            app:titleTextColor="@color/colorWhite"
             app:title="Registration"
+            android:theme="@style/ToolbarTheme"
             android:elevation="4dp">
 
     </android.support.v7.widget.Toolbar>
