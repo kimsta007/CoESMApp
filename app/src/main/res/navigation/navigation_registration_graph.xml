@@ -50,4 +50,7 @@
         <action android:id="@+id/action_commercialAddressFragment_to_destination_address_details"
                 app:destination="@id/destination_address_details"/>
     </fragment>
+    <fragment android:id="@+id/destination_verification_code"
+              android:name="coesmapp.com.coesmapp.ui.registration.VerificationCodeFragment"
+              android:label="VerificationCodeFragment"/>
 </navigation>

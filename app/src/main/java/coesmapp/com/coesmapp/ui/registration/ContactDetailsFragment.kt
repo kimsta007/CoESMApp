@@ -69,7 +69,9 @@ class ContactDetailsFragment : BaseFragment() {
                 "Enter a new primary phone number.",
                 "Update",
                 DialogInterface.OnClickListener { dialog, which ->
-                    view.tv_contacts_cell_number.text = input.text.toString()
+                    if (input.text.isEmpty()) {
+                        dialog.dismiss()
+                    } else view.tv_contacts_cell_number.text = input.text.toString()
                     // update the database with the new value
                     dialog.dismiss()
                 },
@@ -93,7 +95,12 @@ class ContactDetailsFragment : BaseFragment() {
                 "Enter a new primary email address.",
                 "Update",
                 DialogInterface.OnClickListener { dialog, which ->
+                    if (input.text.isEmpty()){
+                        dialog.dismiss()
+                    }else{
                     view.tv_contact_email_address.text = input.text.toString()
+                        dialog.dismiss()
+                    }
                     // update the database with the new value
                     dialog.dismiss()
                 },
@@ -132,7 +139,8 @@ class ContactDetailsFragment : BaseFragment() {
         })
 
         view.btn_contact_continue.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.destination_address_details)
+//            Navigation.findNavController(it).navigate(R.id.destination_address_details)
+            Navigation.findNavController(it).navigate(R.id.destination_verification_code)
         }
 
         return view
