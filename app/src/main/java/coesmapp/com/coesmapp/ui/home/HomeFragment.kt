@@ -1,5 +1,6 @@
 package coesmapp.com.coesmapp.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -20,7 +21,8 @@ class HomeFragment : BaseFragment() {
 
 
         view.btn_meter_reading_schedule.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.destination_reading_schedule)
+            //            Navigation.findNavController(it).navigate(R.id.destination_reading_schedule)
+            startActivity(Intent(activity!!, MeterReadingScheduleActivity::class.java))
         }
 
         view.btn_capture_meter_reading.setOnClickListener {
