@@ -13,6 +13,7 @@ import coesmapp.com.coesmapp.R
 import coesmapp.com.coesmapp.models.PrimaryContacts
 import coesmapp.com.coesmapp.ui.common.BaseFragment
 import coesmapp.com.coesmapp.utilities.DialogUtil
+import coesmapp.com.coesmapp.utilities.setupToolbarAndTitle
 import coesmapp.com.coesmapp.viewmodels.ContactDetailsViewModel
 import kotlinx.android.synthetic.main.fragment_contact_details.view.*
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -27,8 +28,7 @@ class ContactDetailsFragment : BaseFragment() {
         val view = inflater.inflate(R.layout.fragment_contact_details, container, false)
 
         // set title for ToolBar
-        val regToolbar = activity?.findViewById<android.support.v7.widget.Toolbar>(R.id.toolbar_registration)
-        regToolbar?.title = getString(R.string.contact_details_title_label)
+        activity!!.setupToolbarAndTitle(R.id.toolbar_registration, getString(R.string.contact_details_title_label))
 
 
         view.btn_contact_continue.isEnabled = false

@@ -11,12 +11,17 @@ import androidx.navigation.Navigation
 import coesmapp.com.coesmapp.R
 import coesmapp.com.coesmapp.ui.common.BaseFragment
 import coesmapp.com.coesmapp.utilities.DialogUtil
+import coesmapp.com.coesmapp.utilities.setupToolbarAndTitle
 import kotlinx.android.synthetic.main.fragment_verification_code.view.*
 
 class VerificationCodeFragment : BaseFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_verification_code, container, false)
+
+        // set title for ToolBar
+        activity!!.setupToolbarAndTitle(R.id.toolbar_registration, getString(R.string.registration_verification))
+
         view.btn_verify_code.isEnabled = false
 
         view.et_verification_code.addTextChangedListener(object : TextWatcher {

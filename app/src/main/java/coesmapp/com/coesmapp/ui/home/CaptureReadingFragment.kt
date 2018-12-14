@@ -28,12 +28,15 @@ import java.util.*
 class CaptureReadingFragment : BaseFragment() {
 
     private lateinit var currentPhotoPath: String
+    private lateinit var photoURI: Uri
     private val REQUEST_IMAGE_CAPTURE = 1
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_capture_reading, container, false)
 
         activity!!.setupToolbarAndTitle(R.id.toolbar_home, "Capture meter reading")
+
+        view.btn_submit_reading.isEnabled = false
 
         view.img_capture_reading.setOnClickListener {
             dispatchTakePictureIntent()
@@ -67,13 +70,14 @@ class CaptureReadingFragment : BaseFragment() {
                     null
                 }
                 photoFile?.also { file ->
-                    val photoURI: Uri = FileProvider.getUriForFile(
+                    photoURI = FileProvider.getUriForFile(
                         activity!!,
                         "coesmapp.com.coesmapp.fileprovider",
                         file
                     )
-                    takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
                 }
+                println("PhotoURI : ${photoURI}")
+                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
             }
         }
     }
@@ -81,8 +85,12 @@ class CaptureReadingFragment : BaseFragment() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == Activity.RESULT_OK) {
-            val imageBitmap = data?.extras!!.get("data") as Bitmap
-            img_capture_reading.setImageBitmap(imageBitmap)
+            data?.let {
+                val imageBitmap = data.extras!!.get("data") as Bitmap
+                img_capture_reading.setImageBitmap(imageBitmap)
+                btn_submit_reading.isEnabled = true
+
+            }
         }
     }
 

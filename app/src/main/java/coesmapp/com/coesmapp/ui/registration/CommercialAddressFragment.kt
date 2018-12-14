@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import coesmapp.com.coesmapp.R
 import coesmapp.com.coesmapp.ui.common.BaseFragment
+import coesmapp.com.coesmapp.utilities.setupToolbarAndTitle
 
 class CommercialAddressFragment : BaseFragment() {
 
@@ -13,8 +14,8 @@ class CommercialAddressFragment : BaseFragment() {
         val view = inflater.inflate(R.layout.fragment_commercial_address, container, false)
 
         // set title for ToolBar
-        val regToolbar = activity?.findViewById<android.support.v7.widget.Toolbar>(R.id.toolbar_registration)
-        regToolbar?.title = getString(R.string.commecial_address_title_label)
+
+        activity!!.setupToolbarAndTitle(R.id.toolbar_registration, getString(R.string.commecial_address_title_label))
 
 
         return view

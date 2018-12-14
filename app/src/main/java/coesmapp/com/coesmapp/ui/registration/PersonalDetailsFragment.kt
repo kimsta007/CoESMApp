@@ -8,6 +8,7 @@ import androidx.navigation.Navigation
 import coesmapp.com.coesmapp.R
 import coesmapp.com.coesmapp.ui.common.BaseFragment
 import coesmapp.com.coesmapp.utilities.displaySpinner
+import coesmapp.com.coesmapp.utilities.setupToolbarAndTitle
 import kotlinx.android.synthetic.main.fragment_personal_details.view.*
 
 class PersonalDetailsFragment : BaseFragment() {
@@ -18,8 +19,7 @@ class PersonalDetailsFragment : BaseFragment() {
         val view = inflater.inflate(R.layout.fragment_personal_details, container, false)
 
         // set title for ToolBar
-        val regToolbar = activity?.findViewById<android.support.v7.widget.Toolbar>(R.id.toolbar_registration)
-        regToolbar?.title = getString(R.string.personal_details_title_label)
+        activity!!.setupToolbarAndTitle(R.id.toolbar_registration, getString(R.string.personal_details_title_label))
 
         // Setup the spinner values for
         view.spinner_owner_tenant.displaySpinner(this.activity!!, R.array.property_ownership)

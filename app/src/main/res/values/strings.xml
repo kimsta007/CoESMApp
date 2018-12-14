@@ -37,6 +37,7 @@
     <string name="company_name_hint">Company Name</string>
     <string name="ts_and_cs_title_label">Terms and Condition</string>
     <string name="registration_verification">Registration Verification</string>
+    <string name="reading_objections_title">Reading Objections</string>
     <string name="stand_alone_title_label">Stand Alone Address</string>
     <string name="personal_details_title_label">Personal Details</string>
     <string name="contact_details_title_label">Contact Details</string>
@@ -44,6 +45,8 @@
     <string name="commecial_address_title_label">Commercial Address</string>
     <string name="address_details_title_label">Address Details</string>
     <string name="proper_ownership_status">Are you the property Owner or Tenant?</string>
+    <string name="reports_title">Reports</string>
+    <string name="meter_reading_scheduke_title">Meter Reading Schedule</string>
 
     <string-array name="yes_or_no">
         <item>Yes</item>
@@ -60,5 +63,10 @@
     <string-array name="contact_preference">
         <item>Email</item>
         <item>Phone</item>
+    </string-array>
+    <string-array name="readings_range">
+        <item>Last 1 month</item>
+        <item>Last 3 months</item>
+        <item>Last 5 month</item>
     </string-array>
 </resources>
