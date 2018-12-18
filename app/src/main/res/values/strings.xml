@@ -83,6 +83,22 @@
     <string name="message_security_warning">For security reasons, please verify the confirmation code with the agent
         apon arrival.
     </string>
+    <string name="label_meter_number">Meter Number</string>
+    <string name="label_previous_meter_reading">Previous Meter Reading</string>
+    <string name="label_current_meter_reading">Current Meter Reading</string>
+    <string name="label_submit_reading">Submit Reading</string>
+    <string name="description_image_capture_reading">Image Capture Reading</string>
+    <string name="and">and</string>
+    <string name="label_between_which_hours">Between which hours?</string>
+    <string name="label_set_agent_date">One of our agents will be in your area during the following dates. Please select
+        a date suitable for your meter reading.
+    </string>
+    <string name="hint_firstname_s">Firstname(s)</string>
+    <string name="message_verification_sent_cellphone">An SMS with a verification code has been sent to you cellphone,
+        please enter the code below:
+    </string>
+    <string name="label_enter_verification_code">Enter Verification Code:</string>
+    <string name="label_verify">Verify</string>
 
     <string-array name="business_hours">
         <item>7am</item>

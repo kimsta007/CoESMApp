@@ -1,45 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                             xmlns:app="http://schemas.android.com/apk/res-auto"
-                                             xmlns:tools="http://schemas.android.com/tools"
-                                             android:layout_width="match_parent"
-                                             android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <TextView
-            android:text="An SMS with a verification code has been sent to you cellphone, please enter the code below:"
+            android:text="@string/message_verification_sent_cellphone"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/textView8" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="24dp"
+            android:id="@+id/message_verification_sent_cellphone" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp" android:layout_marginTop="32dp"
             app:layout_constraintTop_toTopOf="parent" android:textSize="18sp" android:textStyle="bold"
             android:textAlignment="viewStart"/>
     <TextView
-            android:text="Enter Verification Code:"
+            android:text="@string/label_enter_verification_code"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView9" app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/label_enter_verification_code" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="24dp" android:layout_marginTop="24dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" app:layout_constraintEnd_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/message_verification_sent_cellphone"
+            app:layout_constraintEnd_toStartOf="@+id/guideline7"
             android:layout_marginEnd="8dp"/>
-    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                          android:id="@+id/guideline7" app:layout_constraintGuide_begin="182dp"
-                                          android:orientation="vertical"/>
+    <android.support.constraint.Guideline
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/guideline7" app:layout_constraintGuide_begin="182dp"
+            android:orientation="vertical"/>
     <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:ems="10"
             android:id="@+id/et_verification_code"
-            app:layout_constraintTop_toTopOf="@+id/textView9" app:layout_constraintBottom_toBottomOf="@+id/textView9"
+            app:layout_constraintTop_toTopOf="@+id/label_enter_verification_code"
+            app:layout_constraintBottom_toBottomOf="@+id/label_enter_verification_code"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"
             app:layout_constraintStart_toStartOf="@+id/guideline7" android:layout_marginStart="8dp"/>
     <Button
-            android:text="Verify"
+            android:text="@string/label_verify"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/btn_verify_code" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             style="@style/Button_Solid" android:layout_marginTop="32dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView9"/>
+            app:layout_constraintTop_toBottomOf="@+id/label_enter_verification_code"/>
 </android.support.constraint.ConstraintLayout>

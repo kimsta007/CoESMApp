@@ -12,7 +12,7 @@
 
 
         <TextView
-                android:text="One of our agents will be in your area during the following dates. Please select a date sutable for your meter reading. "
+                android:text="@string/label_set_agent_date"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView14" app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +28,7 @@
                 android:layout_marginStart="24dp" app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="24dp" app:layout_constraintDimensionRatio="w,1:1"/>
         <TextView
-                android:text="Between which hours?"
+                android:text="@string/label_between_which_hours"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView16" app:layout_constraintStart_toStartOf="parent"
@@ -50,7 +50,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/textView17"
                 app:layout_constraintStart_toEndOf="@+id/textView17" android:layout_marginStart="16dp"/>
         <TextView
-                android:text="and"
+                android:text="@string/and"
                 android:layout_width="wrap_content"
                 android:layout_height="17dp"
                 android:id="@+id/textView17" android:textAlignment="center"

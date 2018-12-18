@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                             xmlns:app="http://schemas.android.com/apk/res-auto"
-                                             xmlns:tools="http://schemas.android.com/tools"
-                                             android:layout_width="match_parent"
-                                             android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
     <TextView
@@ -21,14 +22,14 @@
             android:layout_marginStart="24dp" android:layout_marginTop="24dp"
             app:layout_constraintTop_toBottomOf="@+id/tv_contact_details_message"/>
     <TextView
-            android:text="061 270 5081"
             android:backgroundTint="@color/colorSpinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tv_contacts_cell_number"
             app:layout_constraintBottom_toBottomOf="@+id/tv_cellnumber_label"
             app:layout_constraintTop_toTopOf="@+id/tv_cellnumber_label"
-            app:layout_constraintStart_toEndOf="@+id/tv_cellnumber_label" android:layout_marginStart="16dp"/>
+            app:layout_constraintStart_toEndOf="@+id/tv_cellnumber_label" android:layout_marginStart="16dp"
+            tools:text="061 270 5081"/>
     <RadioGroup
             android:layout_width="0dp"
             android:id="@+id/tg_phone_primary"
@@ -63,13 +64,13 @@
             app:layout_constraintTop_toBottomOf="@+id/tg_phone_primary"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="24dp"/>
     <TextView
-            android:text="@string/sample_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tv_contact_email_address"
             app:layout_constraintTop_toTopOf="@+id/tv_emai_address_label"
             app:layout_constraintBottom_toBottomOf="@+id/tv_emai_address_label"
-            app:layout_constraintStart_toEndOf="@+id/tv_emai_address_label" android:layout_marginStart="16dp"/>
+            app:layout_constraintStart_toEndOf="@+id/tv_emai_address_label" android:layout_marginStart="16dp"
+            tools:text="trustmub@gmail.com"/>
     <RadioGroup
             android:layout_width="0dp"
             android:layout_height="wrap_content"

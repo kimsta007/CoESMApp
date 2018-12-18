@@ -30,6 +30,8 @@ class ContactDetailsFragment : BaseFragment() {
         // set title for ToolBar
         activity!!.setupToolbarAndTitle(R.id.toolbar_registration, getString(R.string.contact_details_title_label))
 
+        view.tv_contacts_cell_number.text = "061 270 5081"
+        view.tv_contact_email_address.text = "trustmub@gmail.com"
 
         view.btn_contact_continue.isEnabled = false
         var primaryCont: PrimaryContacts = PrimaryContacts(false, false)
@@ -95,10 +97,10 @@ class ContactDetailsFragment : BaseFragment() {
                 "Enter a new primary email address.",
                 "Update",
                 DialogInterface.OnClickListener { dialog, which ->
-                    if (input.text.isEmpty()){
+                    if (input.text.isEmpty()) {
                         dialog.dismiss()
-                    }else{
-                    view.tv_contact_email_address.text = input.text.toString()
+                    } else {
+                        view.tv_contact_email_address.text = input.text.toString()
                         dialog.dismiss()
                     }
                     // update the database with the new value
@@ -139,7 +141,7 @@ class ContactDetailsFragment : BaseFragment() {
         })
 
         view.btn_contact_continue.setOnClickListener {
-//            Navigation.findNavController(it).navigate(R.id.destination_address_details)
+            //            Navigation.findNavController(it).navigate(R.id.destination_address_details)
             Navigation.findNavController(it).navigate(R.id.destination_verification_code)
         }
 
