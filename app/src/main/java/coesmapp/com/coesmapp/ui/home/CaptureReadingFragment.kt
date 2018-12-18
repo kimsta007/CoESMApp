@@ -1,18 +1,24 @@
 package coesmapp.com.coesmapp.ui.home
 
+import android.Manifest.permission.CAMERA
+import android.Manifest.permission.WRITE_EXTERNAL_STORAGE
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.DialogInterface
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
+import android.support.v4.app.ActivityCompat
+import android.support.v4.content.ContextCompat
 import android.support.v4.content.FileProvider
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.Navigation
 import coesmapp.com.coesmapp.R
 import coesmapp.com.coesmapp.ui.common.BaseFragment
@@ -39,7 +45,13 @@ class CaptureReadingFragment : BaseFragment() {
         view.btn_submit_reading.isEnabled = false
 
         view.img_capture_reading.setOnClickListener {
-            dispatchTakePictureIntent()
+            if (checkForPermission()) {
+                dispatchTakePictureIntent()
+
+            } else {
+                requestPermission()
+            }
+
         }
 
         view.btn_submit_reading.setOnClickListener {
@@ -104,5 +116,42 @@ class CaptureReadingFragment : BaseFragment() {
             currentPhotoPath = absolutePath
         }
     }
+
+    private fun requestPermission() {
+        ActivityCompat.requestPermissions(
+            activity!!,
+            arrayOf(WRITE_EXTERNAL_STORAGE, CAMERA),
+            1
+        )
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        when (requestCode) {
+            1 -> {
+                if (grantResults.isNotEmpty()) {
+                    val storagePermission = grantResults[0] == PackageManager.PERMISSION_GRANTED
+                    val cameraPermission = grantResults[1] == PackageManager.PERMISSION_GRANTED
+                    if (storagePermission && cameraPermission) {
+                        Toast.makeText(activity!!, "Permission Granted", Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(activity!!, "Permission Granted", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+        }
+    }
+
+    private fun checkForPermission(): Boolean {
+        val externalStorage = ContextCompat.checkSelfPermission(activity!!.applicationContext, WRITE_EXTERNAL_STORAGE)
+        val cameraPermission = ContextCompat.checkSelfPermission(activity!!.applicationContext, CAMERA)
+
+        return externalStorage == PackageManager.PERMISSION_GRANTED && cameraPermission == PackageManager.PERMISSION_GRANTED
+    }
+
 
 }

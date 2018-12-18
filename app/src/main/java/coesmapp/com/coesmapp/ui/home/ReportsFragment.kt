@@ -14,6 +14,7 @@ import kotlinx.android.synthetic.main.fragment_reports.view.*
 
 class ReportsFragment : BaseFragment() {
 
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_reports, container, false)
 
