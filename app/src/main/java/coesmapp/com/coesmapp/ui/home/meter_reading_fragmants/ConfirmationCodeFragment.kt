@@ -13,6 +13,7 @@ class ConfirmationCodeFragment : BaseFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val rootView = inflater.inflate(R.layout.fragment_confirmation_code, container, false)
+        Log.d("ConfirmationCode", "OnCreate")
 
         return rootView
     }
@@ -25,23 +26,9 @@ class ConfirmationCodeFragment : BaseFragment() {
 
     }
 
-    companion object {
-        /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
-        private val ARG_SECTION_NUMBER = "section_number"
-
-        /**
-         * Returns a new instance of this fragment for the given section
-         * number.
-         */
-        fun newInstance(sectionNumber: Int): ConfirmationCodeFragment {
-            val fragment = ConfirmationCodeFragment()
-            val args = Bundle()
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber)
-            fragment.arguments = args
-            return fragment
-        }
-    }
+//    companion object {
+//        fun newInstance(): ConfirmationCodeFragment {
+//            return ConfirmationCodeFragment()
+//        }
+//    }
 }

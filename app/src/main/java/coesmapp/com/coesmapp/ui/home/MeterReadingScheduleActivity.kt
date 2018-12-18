@@ -1,24 +1,11 @@
 package coesmapp.com.coesmapp.ui.home
 
-import android.support.design.widget.TabLayout
-import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity
-
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentPagerAdapter
-import android.support.v4.view.ViewPager
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
-import android.view.ViewGroup
-
+import android.support.design.widget.TabLayout
 import coesmapp.com.coesmapp.R
 import coesmapp.com.coesmapp.ui.common.BaseActivity
+import coesmapp.com.coesmapp.ui.home.meter_reading_fragmants.SectionsPagerAdapter
 import kotlinx.android.synthetic.main.activity_meter_reading_schedule.*
-import kotlinx.android.synthetic.main.fragment_meter_reading_schedule.view.*
 
 class MeterReadingScheduleActivity : BaseActivity() {
 
@@ -30,7 +17,7 @@ class MeterReadingScheduleActivity : BaseActivity() {
      * may be best to switch to a
      * [android.support.v4.app.FragmentStatePagerAdapter].
      */
-    private var mSectionsPagerAdapter: SectionsPagerAdapter? = null
+    private lateinit var mSectionsPagerAdapter: SectionsPagerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -75,4 +75,25 @@
     <string name="tab_text_3">Tab 3</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="label_close">Close</string>
+    <string name="message_booking_confirmation_message">Your meter reading booking has been received and your
+        confirmation code is: 1234556789
+    </string>
+    <string name="message_security_warning">For security reasons, please verify the confirmation code with the agent
+        apon arrival.
+    </string>
+
+    <string-array name="business_hours">
+        <item>7am</item>
+        <item>8am</item>
+        <item>9am</item>
+        <item>10am</item>
+        <item>11am</item>
+        <item>12am</item>
+        <item>1pm</item>
+        <item>2pm</item>
+        <item>3pm</item>
+        <item>4pm</item>
+    </string-array>
 </resources>
