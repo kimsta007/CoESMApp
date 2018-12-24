@@ -1,4 +1,4 @@
-package coesmapp.com.coesmapp.ui.fragments
+package coesmapp.com.coesmapp.ui.login
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/navigation_login_graph.xml" app:startDestination="@id/loginFragment">
+
+    <fragment android:id="@+id/loginFragment" android:name="coesmapp.com.coesmapp.ui.login.LoginFragment"
+              android:label="LoginFragment"/>
+    <fragment android:id="@+id/passwordResetFragment"
+              android:name="coesmapp.com.coesmapp.ui.login.PasswordResetFragment"
+              android:label="PasswordResetFragment"/>
+</navigation>

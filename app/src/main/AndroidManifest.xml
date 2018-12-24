@@ -47,6 +47,8 @@
                 android:label="@string/title_activity_meter_reading_schedule"
                 android:theme="@style/AppTheme">
         </activity>
+        <activity android:name=".ui.login.LoginActivity">
+        </activity>
     </application>
 
 </manifest>
