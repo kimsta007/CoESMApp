@@ -26,7 +26,7 @@ class PersonalDetailsFragment : BaseFragment() {
 
     override fun onAttach(context: Context?) {
         super.onAttach(context)
-        registrationViewModel.getUserProfile().observe(this, Observer { userProfileEntity ->
+        registrationViewModel.getUserProfileTwo().observe(this, Observer { userProfileEntity ->
             userProfileEntity?.let {
                 personalRecord = it.copy()
             }
