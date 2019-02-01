@@ -15,15 +15,6 @@
             android:layout_marginEnd="24dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="24dp"
             android:textAlignment="center" android:textSize="18sp"/>
-    <Button
-            android:text="@string/continue_label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_address_continue" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="24dp"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="24dp"
-            android:layout_marginBottom="16dp" app:layout_constraintBottom_toBottomOf="parent"
-            style="@style/Button_Solid"/>
     <ImageView
             android:layout_width="50dp"
             android:contentDescription="@string/complex_name"

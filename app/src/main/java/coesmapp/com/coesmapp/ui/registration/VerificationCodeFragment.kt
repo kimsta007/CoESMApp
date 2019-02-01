@@ -12,9 +12,13 @@ import coesmapp.com.coesmapp.R
 import coesmapp.com.coesmapp.ui.common.BaseFragment
 import coesmapp.com.coesmapp.utilities.DialogUtil
 import coesmapp.com.coesmapp.utilities.setupToolbarAndTitle
+import coesmapp.com.coesmapp.viewmodels.RegistrationViewModel
 import kotlinx.android.synthetic.main.fragment_verification_code.view.*
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class VerificationCodeFragment : BaseFragment() {
+
+    private val registrationViewModel: RegistrationViewModel by viewModel()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_verification_code, container, false)

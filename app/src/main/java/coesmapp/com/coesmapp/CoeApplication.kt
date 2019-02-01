@@ -4,13 +4,18 @@ package coesmapp.com.coesmapp
 import android.app.Application
 import android.arch.persistence.room.Room
 import coesmapp.com.coesmapp.repository.LoginRepository
+import coesmapp.com.coesmapp.repository.RegistrationRepository
 import coesmapp.com.coesmapp.utilities.AppDatabase
 import coesmapp.com.coesmapp.viewmodels.ContactDetailsViewModel
 import coesmapp.com.coesmapp.viewmodels.LoginViewModel
+import coesmapp.com.coesmapp.viewmodels.RegistrationViewModel
 import org.koin.android.ext.android.startKoin
 import org.koin.android.viewmodel.ext.koin.viewModel
 import org.koin.dsl.module.Module
 import org.koin.dsl.module.module
+import java.security.Permission
+import java.util.concurrent.ExecutorService
+import java.util.concurrent.Executors
 
 class CoeApplication : Application() {
 
@@ -36,6 +41,7 @@ class CoeApplication : Application() {
 
     private fun generalModule(): Module = module {
         single(name = "context") { applicationContext }
+        single { Executors.newCachedThreadPool() }
     }
 
     /**
@@ -53,6 +59,7 @@ class CoeApplication : Application() {
     private fun getDatabaseModule(): Module = module {
         single { Room.databaseBuilder(get("context"), AppDatabase::class.java, "application_db").build() }
         single { get<AppDatabase>().userDao() }
+        single { get<AppDatabase>().userProfileDao() }
     }
 
     /**
@@ -61,7 +68,8 @@ class CoeApplication : Application() {
      * TODO: will move this module to the di package to provide a more lean application class
      */
     private fun getRepositoryModules(): Module = module {
-        single { LoginRepository() }
+        single { LoginRepository(get(), get()) }
+        single { RegistrationRepository(get(), get()) }
     }
 
     /**
@@ -70,7 +78,8 @@ class CoeApplication : Application() {
      * TODO: will move this module to the di package to provide a more lean application class
      */
     private fun getViewModelModule(): Module = module {
-        viewModel { LoginViewModel() }
+        viewModel { LoginViewModel(get()) }
+        viewModel { RegistrationViewModel(get()) }
         viewModel { ContactDetailsViewModel() }
     }
 }

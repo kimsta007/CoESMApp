@@ -1,6 +1,7 @@
 package coesmapp.com.coesmapp.ui.registration
 
 import android.arch.lifecycle.Observer
+import android.content.Context
 import android.content.DialogInterface
 import android.os.Bundle
 import android.text.InputType
@@ -11,10 +12,13 @@ import android.widget.EditText
 import androidx.navigation.Navigation
 import coesmapp.com.coesmapp.R
 import coesmapp.com.coesmapp.models.PrimaryContacts
+import coesmapp.com.coesmapp.models.room.UserProfileEntity
 import coesmapp.com.coesmapp.ui.common.BaseFragment
 import coesmapp.com.coesmapp.utilities.DialogUtil
 import coesmapp.com.coesmapp.utilities.setupToolbarAndTitle
 import coesmapp.com.coesmapp.viewmodels.ContactDetailsViewModel
+import coesmapp.com.coesmapp.viewmodels.RegistrationViewModel
+import kotlinx.android.synthetic.main.fragment_contact_details.*
 import kotlinx.android.synthetic.main.fragment_contact_details.view.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
@@ -22,7 +26,19 @@ import org.koin.android.viewmodel.ext.android.viewModel
 class ContactDetailsFragment : BaseFragment() {
 
     private val contactViewModel: ContactDetailsViewModel by viewModel()
+    private val registrationDetails: RegistrationViewModel by viewModel()
+    private lateinit var personalRecord: UserProfileEntity
 
+    override fun onAttach(context: Context?) {
+        super.onAttach(context)
+
+        registrationDetails.getUserProfile().observe(this, Observer { userProfileEntity ->
+            userProfileEntity?.let {
+                personalRecord = it.copy()
+            }
+
+        })
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_contact_details, container, false)
@@ -30,8 +46,6 @@ class ContactDetailsFragment : BaseFragment() {
         // set title for ToolBar
         activity!!.setupToolbarAndTitle(R.id.toolbar_registration, getString(R.string.contact_details_title_label))
 
-        view.tv_contacts_cell_number.text = "061 270 5081"
-        view.tv_contact_email_address.text = "trustmub@gmail.com"
 
         view.btn_contact_continue.isEnabled = false
         var primaryCont: PrimaryContacts = PrimaryContacts(false, false)
@@ -134,6 +148,7 @@ class ContactDetailsFragment : BaseFragment() {
         contactViewModel.getPrimaryContactStatus().observe(this, Observer {
             println("State of email in Observer ${it?.emailSet}")
             println("State of phone in Observer ${it?.phoneSet}")
+            initialiseValues()
 
             it?.let { pc ->
                 view.btn_contact_continue.isEnabled = pc.emailSet && pc.phoneSet
@@ -141,11 +156,22 @@ class ContactDetailsFragment : BaseFragment() {
         })
 
         view.btn_contact_continue.setOnClickListener {
+            personalRecord.password = "password"
+            savePersonalRecord(personalRecord)
             //            Navigation.findNavController(it).navigate(R.id.destination_address_details)
             Navigation.findNavController(it).navigate(R.id.destination_verification_code)
         }
 
         return view
+    }
+
+    private fun savePersonalRecord(record: UserProfileEntity) {
+        registrationDetails.addUserProfile(record)
+    }
+
+    private fun initialiseValues() {
+        tv_contacts_cell_number.text = personalRecord.phone.toString()
+        tv_contact_email_address.text = personalRecord.email.toString()
     }
 
     override fun onDetach() {

@@ -32,9 +32,9 @@ class AddressDetailsFragment : BaseFragment() {
             Navigation.findNavController(it).navigate(R.id.destination_commecial_address)
         }
 
-        view.btn_address_continue.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.destination_registration_verification)
-        }
+//        view.btn_address_continue.setOnClickListener {
+//            Navigation.findNavController(it).navigate(R.id.destination_registration_verification)
+//        }
 
 
         return view
