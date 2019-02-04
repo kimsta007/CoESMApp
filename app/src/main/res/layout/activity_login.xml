@@ -20,11 +20,11 @@
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/logo_transparent"/>
+                android:src="@drawable/ic_cittcouncillogo"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="City of Ekurhuleni"
+                android:text="City of Mahikeng"
                 android:textColor="#000"
                 android:textSize="30sp"
                 android:textStyle="bold"
@@ -79,18 +79,6 @@
                     android:layout_marginRight="30dp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="25dp"
-                    android:textSize="15dp"
-                    android:textAlignment="center"/>
-
-            <TextView
-                    android:id="@+id/noaccount"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Don't have an account?"
-                    android:textColorHint="#000103"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="15dp"
                     android:textSize="15dp"
                     android:textAlignment="center"/>
 

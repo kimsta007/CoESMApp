@@ -26,17 +26,23 @@ import org.koin.android.viewmodel.ext.android.viewModel
 class ContactDetailsFragment : BaseFragment() {
 
     private val contactViewModel: ContactDetailsViewModel by viewModel()
-    private val registrationDetails: RegistrationViewModel by viewModel()
+    private val registrationViewModel: RegistrationViewModel by viewModel()
     private lateinit var personalRecord: UserProfileEntity
 
     override fun onAttach(context: Context?) {
         super.onAttach(context)
 
-        registrationDetails.getUserProfile().observe(this, Observer { userProfileEntity ->
+        registrationViewModel.getUserProfile().observe(this, Observer { userProfileEntity ->
             userProfileEntity?.let {
                 personalRecord = it.copy()
             }
 
+        })
+
+        registrationViewModel.getProfileData().observe(this, Observer { profile ->
+            profile?.let {
+                personalRecord = it.copy()
+            }
         })
     }
 
@@ -87,7 +93,12 @@ class ContactDetailsFragment : BaseFragment() {
                 DialogInterface.OnClickListener { dialog, which ->
                     if (input.text.isEmpty()) {
                         dialog.dismiss()
-                    } else view.tv_contacts_cell_number.text = input.text.toString()
+                    } else {
+                        view.tv_contacts_cell_number.text = input.text.toString()
+                        personalRecord.phone = input.text.toString().toInt()
+                        registrationViewModel.addUserProfile(personalRecord)
+
+                    }
                     // update the database with the new value
                     dialog.dismiss()
                 },
@@ -115,6 +126,8 @@ class ContactDetailsFragment : BaseFragment() {
                         dialog.dismiss()
                     } else {
                         view.tv_contact_email_address.text = input.text.toString()
+                        personalRecord.email = input.text.toString()
+                        registrationViewModel.addUserProfile(personalRecord)
                         dialog.dismiss()
                     }
                     // update the database with the new value
@@ -137,7 +150,6 @@ class ContactDetailsFragment : BaseFragment() {
                 false -> {
                     primaryCont = primaryCont.copy(emailSet = false)
                     contactViewModel.setPrimaryConstants(primaryCont)
-
                 }
             }
         }
@@ -162,11 +174,14 @@ class ContactDetailsFragment : BaseFragment() {
             Navigation.findNavController(it).navigate(R.id.destination_verification_code)
         }
 
+        // Observers
+        observeDatabaseChanges()
+
         return view
     }
 
     private fun savePersonalRecord(record: UserProfileEntity) {
-        registrationDetails.addUserProfile(record)
+        registrationViewModel.addUserProfile(record)
     }
 
     private fun initialiseValues() {
@@ -177,5 +192,15 @@ class ContactDetailsFragment : BaseFragment() {
     override fun onDetach() {
         super.onDetach()
         contactViewModel.getPrimaryContactStatus().removeObservers(this)
+    }
+
+    private fun observeDatabaseChanges() {
+        registrationViewModel.getProfileData().observe(this, Observer { profile ->
+            profile?.let {
+                tv_contacts_cell_number.text = it.phone.toString()
+                tv_contact_email_address.text = it.email
+            }
+
+        })
     }
 }

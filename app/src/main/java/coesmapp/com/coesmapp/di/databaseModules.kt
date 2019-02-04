@@ -13,4 +13,5 @@ val databaseModules = module {
     single { Room.databaseBuilder(get("context"), AppDatabase::class.java, "application_db").build() }
     single { get<AppDatabase>().userDao() }
     single { get<AppDatabase>().userProfileDao() }
+    single { get<AppDatabase>().userAddressDao() }
 }

@@ -27,7 +27,8 @@ class TsAndCsFragment : BaseFragment() {
         activity!!.setupToolbarAndTitle(R.id.toolbar_registration, getString(R.string.ts_and_cs_title_label))
 
         // Load the terms and conditions from the browser
-        view.wv_ts_and_cs.loadUrl("https://www.samplestore.com/legal/tnc_for_members")
+//        view.wv_ts_and_cs.loadUrl("https://www.samplestore.com/legal/tnc_for_members")
+        view.wv_ts_and_cs.loadUrl("file:///android_asset/tsandcs.html")
 
         view.btn_terms_continue.isEnabled = false
 

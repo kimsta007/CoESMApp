@@ -51,7 +51,7 @@
             <android.support.design.widget.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Street Name"/>
+                    android:hint="Street Name" android:id="@+id/ti_complex_street_name"/>
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
                 android:id="@+id/til_complex_street_number"
@@ -79,7 +79,7 @@
             <android.support.design.widget.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Suburb" android:id="@+id/ti_comple_suburb"/>
+                    android:hint="Suburb" android:id="@+id/ti_complex_suburb"/>
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
                 android:id="@+id/til_complex_postal_code"

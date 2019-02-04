@@ -1,6 +1,7 @@
 package coesmapp.com.coesmapp.ui.registration
 
 import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -9,7 +10,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import coesmapp.com.coesmapp.R
+import coesmapp.com.coesmapp.ui.activities.Login
 import coesmapp.com.coesmapp.ui.common.BaseFragment
+import coesmapp.com.coesmapp.ui.login.LoginActivity
 import coesmapp.com.coesmapp.utilities.DialogUtil
 import coesmapp.com.coesmapp.utilities.setupToolbarAndTitle
 import coesmapp.com.coesmapp.viewmodels.RegistrationViewModel
@@ -50,6 +53,7 @@ class VerificationCodeFragment : BaseFragment() {
                 DialogInterface.OnClickListener { dialog, which ->
                     dialog.dismiss()
                     Navigation.findNavController(it).navigate(R.id.destination_address_details)
+//                    startActivity(Intent(activity, Login::class.java))
                 },
                 "OK"
             ).show()

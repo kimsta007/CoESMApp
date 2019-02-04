@@ -8,6 +8,9 @@ import java.util.concurrent.ExecutorService
 
 class LoginRepository(private val userProfileDao: UserProfileDao, private val executor: ExecutorService) {
 
+//    private val authorised: MutableLiveData<Boolean> = MutableLiveData()
+
+
     fun login(user: AuthModel): Boolean {
         var authorised = false
         executor.execute {
@@ -23,10 +26,12 @@ class LoginRepository(private val userProfileDao: UserProfileDao, private val ex
 
     }
 
-    fun loginLive(user: AuthModel): LiveData<Boolean> {
+    fun loginLive(user: AuthModel): LiveData<Boolean>  {
         val authorised: MutableLiveData<Boolean> = MutableLiveData()
+//        authorised.postValue(false)
         executor.execute {
             val userProfile = userProfileDao.getUserProfile()
+//            authorised.postValue(false)
             userProfile?.let {
                 if (user.username == userProfile.email && user.password == userProfile.password) {
                     authorised.postValue(true)

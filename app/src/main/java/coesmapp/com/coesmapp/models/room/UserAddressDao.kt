@@ -7,15 +7,11 @@ import android.arch.persistence.room.OnConflictStrategy
 import android.arch.persistence.room.Query
 
 @Dao
-interface UserProfileDao {
+interface UserAddressDao {
 
-    @Query("SELECT * FROM user_details WHERE id = 0")
-    fun getUserProfile(): UserProfileEntity
-
-    @Query("SELECT * FROM user_details WHERE id = 0")
-    fun getUserProfileData(): LiveData<UserProfileEntity>
-
+    @Query("SELECT * FROM address WHERE id = 0")
+    fun getUserAddress(): UserAddressEntity
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertUser(user: UserProfileEntity)
+    fun insertAddress(address: UserAddressEntity)
 }
